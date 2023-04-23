@@ -1,0 +1,13 @@
+apiVersion: myapp.test.com/v1
+kind: RedisCRD
+metadata:
+  labels:
+    app.kubernetes.io/name: rediscrd
+    app.kubernetes.io/instance: rediscrd-sample
+    app.kubernetes.io/part-of: rediscrd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: rediscrd
+  name: rediscrd-sample
+spec:
+  port: 6379
+  num: 2

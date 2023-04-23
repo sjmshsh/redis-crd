@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- myapp_v1_rediscrd.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,27 @@
+# permissions for end users to view rediscrds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: rediscrd-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: rediscrd
+    app.kubernetes.io/part-of: rediscrd
+    app.kubernetes.io/managed-by: kustomize
+  name: rediscrd-viewer-role
+rules:
+- apiGroups:
+  - myapp.test.com
+  resources:
+  - rediscrds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - myapp.test.com
+  resources:
+  - rediscrds/status
+  verbs:
+  - get
